@@ -1,0 +1,22 @@
+.item-count {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.item-count__quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.2);
+}
+
+.item-count__quantity span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 10px;
+  color: currentColor;
+}
