@@ -1,0 +1,19 @@
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item-list::after {
+  content: "";
+  /* flex: 1 1 100%; */
+  flex-grow: 0.83;
+}
+
+.item-list .item-list__loading {
+  width: 100%;
+  height: calc(100vh - 400px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
