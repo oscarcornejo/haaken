@@ -13,7 +13,7 @@ const ItemList = () => {
     const getProductos = () => {
       setTimeout(() => {
         setProductos(data);
-      }, 2000);
+      }, 1000);
     };
 
     getProductos();

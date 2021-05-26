@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // React Suite
 import { Navbar, Nav, Icon, Dropdown } from "rsuite";
@@ -19,9 +20,9 @@ const NavBar = () => {
   return (
     <Navbar appearance="inverse">
       <Navbar.Header>
-        <a href="#!" className="navbar-brand logo">
+        <Link to="/" className="navbar-brand logo">
           Haaken
-        </a>
+        </Link>
       </Navbar.Header>
 
       <Navbar.Body>
