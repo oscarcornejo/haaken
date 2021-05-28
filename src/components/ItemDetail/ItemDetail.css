@@ -1,0 +1,33 @@
+.item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.item-detail .item-detail__colum-left {
+  width: 49%;
+}
+
+.item-detail .item-detail__colum-left img {
+  width: 100%;
+}
+
+.item-detail .item-detail__colum-right {
+  text-align: center;
+  width: 49%;
+}
+
+.item-detail .item-detail__name {
+  font-size: 32px;
+}
+
+.item-detail .item-detail__detail {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.item-detail .item-detail__price {
+  font-size: 24px;
+  margin-bottom: 22px;
+  font-weight: bold;
+}

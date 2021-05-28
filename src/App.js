@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // CSS
 import "./App.css";
-import Home from "./views/Home";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
@@ -15,8 +15,9 @@ function App() {
 
       <div className="main">
         <Switch>
-          <Route path="/detalle-producto/:id" component={ItemDetailContainer} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={ItemListContainer} />
+          <Route exact path="/category/:id" component={ItemListContainer} />
+          <Route exact path="/item/:id" component={ItemDetailContainer} />
         </Switch>
       </div>
     </Router>

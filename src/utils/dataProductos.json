@@ -1,333 +1,57 @@
 [
   {
-    "_id": "tftRbzc6Pic7NyCkg",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Vans Men's Suede Sk-8 Hi Shoe",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "This shoe is so rad that it was brought back to life from the past so that you can wear it yourself. Consider that a sign.\n\n* Canvas\n* Rubber sole\n* Featuring sturdy canvas and suede uppers\n* Signature waffle rubber outsoles\n* Padded collar and heel counters for all-day comfort, support * and flexibility\n* Legendary lace-up high top",
-    "type": "simple",
-    "vendor": "Vans",
-    "price": {
-      "range": "24.99",
-      "min": 24.99,
-      "max": 24.99
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["aBrzKpykg9jzL62i4", "dj5xTy5dcQ2WRiS9L", "E5oZpTSjYnYfAQSiz"],
-    "isVisible": true,
-    "publishedAt": {
-      "$date": "2016-08-12T08:05:39.743Z"
-    },
-    "createdAt": {
-      "$date": "2016-08-23T05:53:16.134Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T05:53:16.134Z"
-    },
-    "handle": "vans-men-s-suede-sk-8-hi-shoe",
-    "workflow": {
-      "status": "new"
-    }
+    "_id": "1",
+    "name": "Product test",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "hero": "OMG This just came out today!",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "LXECo6pZectbeHYEi",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "DC Men's Pure SE Skate Shoe",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "Stand out, make waves and lay down your best tricks in this two-tone leather technical design from DC. Featuring a lace-up front for full adjustability, the low-profile Pure Se is equipped with a sturdy upper, generous cushioning at the collar and tongue, and plenty of padding at the insole for those extra-hard landings. The thick rubber midsole lends added shock absorbency, while the grip rubber bottom will keep you glued to your board.",
-    "type": "simple",
-    "vendor": "DC",
-    "price": {
-      "range": "60.76",
-      "min": 60.76,
-      "max": 60.76
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["aBrzKpykg9jzL62i4", "dj5xTy5dcQ2WRiS9L", "E5oZpTSjYnYfAQSiz"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "dc-men-s-pure-se-skate-shoe",
-    "createdAt": {
-      "$date": "2016-08-23T05:55:27.680Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:42:00.238Z"
-    }
+    "_id": "2",
+    "name": "Product 1",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "hPYwaFDX4dp9vocNY",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Lucky Chouette X Vans",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "Funky Style and Chic Look \nRenowned for its sister brand, Jardin de Chouette\n\nCreated in 2009, Lucky Chouette quickly won a large Korean celebrity fan base for its funky styles with street cool graphics and humorous art works. \nChouette means owl in French and indicates good luck. \nThus, various owl character prints play a huge part in the design, like Techno Chouette, Yo Chouette, Apple Chouette, etc. \n\nLucky Chouette suggests distinctive style blended with diverse culture for active and smart young women who defy any hint of boredom.\n\n\nNew contemporary character brand \nChunky and casual silhouettes; short and flared skirts, oversized blouses",
-    "type": "simple",
-    "price": {
-      "range": "89",
-      "min": 89,
-      "max": 89
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["E5oZpTSjYnYfAQSiz", "m2TtzXpNNgierdjKN", "dg7X8xtzWDEBpENEL"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "lucky-chouette-x-vans",
-    "createdAt": {
-      "$date": "2016-08-23T06:16:33.781Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:34:29.596Z"
-    },
-    "vendor": "Vans"
+    "_id": "3",
+    "name": "Product 2",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "offer": "BOGOF",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "MGStoBoTZHNcSJrtf",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Vans Authentic Black Canvas Womens Trainers",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "The Vans Authentic is a time tested classic. This retro plimsoll is part of the Off The Wall range and is durable, responsive, and stylish with a lace up front and subtle branding on the outside. Finished off with the vulcanised Waffle sole",
-    "type": "simple",
-    "vendor": "Vans",
-    "price": {
-      "range": "89",
-      "min": 89,
-      "max": 89
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["m2TtzXpNNgierdjKN", "jCCcuLd8hv437Zgha"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "vans-authentic-black-canvas-womens-trainers",
-    "createdAt": {
-      "$date": "2016-08-23T06:30:53.765Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:34:41.306Z"
-    }
+    "_id": "4",
+    "name": "Product 3",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "xe3uaXSNzNZdQbyTP",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Vans Kids Atwood (Canvas) Skate Shoe",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "The Vans Authentic is a time tested classic. This retro plimsoll is part of the Off The Wall range and is durable, responsive, and stylish with a lace up front and subtle branding on the outside. Finished off with the vulcanised Waffle sole",
-    "type": "simple",
-    "vendor": "Vans",
-    "price": {
-      "range": "89",
-      "min": 89,
-      "max": 89
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["tmqLnEa6d4ENgK3GQ", "E5oZpTSjYnYfAQSiz", "jNsL7cTTpk8rYPBqF"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "vans-kids-atwood-canvas-skate-shoe",
-    "createdAt": {
-      "$date": "2016-08-23T06:36:01.365Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:38:01.090Z"
-    }
+    "_id": "5",
+    "name": "Product 4",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "offer": "No srsly GTFO",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "SDtdoRMfhWv5yTrLH",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "DC Trase TX Skate Shoe (Little Kid/Big Kid)",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "The trase continues to make a statement with bold new graphic prints, colors and lux materials. The original, since now.\n\nDC recognizes the fusion between art and skateboarding, taking footwear to the next level. Delivering uncompromising comfort, durability, and eye-catching fashion, DC is the source for everyday and technical skateboarding footwear.",
-    "type": "simple",
-    "vendor": "DC",
-    "price": {
-      "range": "89",
-      "min": 89,
-      "max": 89
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["tmqLnEa6d4ENgK3GQ", "jNsL7cTTpk8rYPBqF"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "kids",
-    "createdAt": {
-      "$date": "2016-08-23T06:38:43.317Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:42:11.331Z"
-    }
+    "_id": "6",
+    "name": "Product 5",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "image": "http://placehold.it/300x300/999/CCC"
   },
   {
-    "_id": "9Pa6qdfXa7y5pQBoY",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Girls' Rio Casual Sneaker",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "Add some old-school cool to her look with this laid-back Airwalk sneaker. It features a quality canvas upper with laces for a good fit, a cushiony insole for comfort and a flexible, non-marking, built-up outsole. Fabric and rubber.",
-    "type": "simple",
-    "vendor": "Airwalk",
-    "price": {
-      "range": "14.99",
-      "min": 14.99,
-      "max": 14.99
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["979wmEwfQTgBJNgYj", "E5oZpTSjYnYfAQSiz"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "girls-rio-casual-sneaker",
-    "createdAt": {
-      "$date": "2016-08-23T06:43:14.043Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:46:51.907Z"
-    }
-  },
-  {
-    "_id": "x6EY6r4jGJga8dAKK",
-    "ancestors": [],
-    "shopId": "J8Bhq3uTtdgwZx3rz",
-    "title": "Liv and Maddie Girls' Retro Liv and Maddie Oxford",
-    "pageTitle": "Nesciunt itaque modi soluta sint sint.",
-    "description": "She'll be able to get her sparkle on with this fun take on the retro oxford from Liv and Maddie! It features a fabric upper, rubber cap toe laces, canvas lining, padded insole, and a built-up outsole. Manmade materials.",
-    "type": "simple",
-    "vendor": "Liv and Maddie",
-    "price": {
-      "range": "14.99",
-      "min": 14.99,
-      "max": 14.99
-    },
-    "isLowQuantity": false,
-    "isSoldOut": false,
-    "isBackorder": false,
-    "metafields": [
-      {
-        "key": "Material",
-        "value": "Canvas"
-      },
-      {
-        "key": "Sole",
-        "value": "Rubber"
-      }
-    ],
-    "requiresShipping": true,
-    "hashtags": ["979wmEwfQTgBJNgYj", "E5oZpTSjYnYfAQSiz", "Gsbw8H4LN9QSLNmB9"],
-    "isVisible": true,
-    "workflow": {
-      "status": "new"
-    },
-    "handle": "liv-and-maddie-girls-retro-liv-and-maddie-oxford",
-    "createdAt": {
-      "$date": "2016-08-23T06:48:14.395Z"
-    },
-    "updatedAt": {
-      "$date": "2016-08-23T06:52:51.877Z"
-    }
+    "_id": "7",
+    "name": "Product 6",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "offer": "info with offer",
+    "image": "http://placehold.it/300x300/999/CCC"
   }
 ]

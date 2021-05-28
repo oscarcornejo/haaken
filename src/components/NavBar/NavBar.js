@@ -18,7 +18,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar appearance="inverse">
+    <Navbar appearance="inverse" className="navbar-container">
       <Navbar.Header>
         <Link to="/" className="navbar-brand logo">
           Haaken

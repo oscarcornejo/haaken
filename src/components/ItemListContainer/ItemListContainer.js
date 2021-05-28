@@ -1,11 +1,28 @@
 import ItemList from "../ItemList/ItemList";
+import { useEffect, useState } from "react";
+
+import data from "../../utils/dataProductos.json";
+
+import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
-  return (
-    <div>
-      <h2>Encuentra las mejores Ofertas de la Semana</h2>
+  const [productos, setProductos] = useState([]);
 
-      <ItemList />
+  useEffect(() => {
+    const getProductos = () => {
+      setTimeout(() => {
+        setProductos(data);
+      }, 1000);
+    };
+
+    getProductos();
+  }, []);
+
+  return (
+    <div className="item-list-container">
+      <h2 className="item-list-container__title">Encuentra las mejores Ofertas de la Semana</h2>
+
+      <ItemList productos={productos} />
     </div>
   );
 };

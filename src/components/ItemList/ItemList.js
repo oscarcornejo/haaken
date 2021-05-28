@@ -1,24 +1,10 @@
 import { Loader } from "rsuite";
-import { useEffect, useState } from "react";
 
-import data from "../../utils/dataProductos.json";
 import Item from "../Item/Item";
 
 import "./ItemList.css";
 
-const ItemList = () => {
-  const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    const getProductos = () => {
-      setTimeout(() => {
-        setProductos(data);
-      }, 1000);
-    };
-
-    getProductos();
-  }, []);
-
+const ItemList = ({ productos }) => {
   return (
     <div className="item-list">
       {productos.length === 0 ? (
