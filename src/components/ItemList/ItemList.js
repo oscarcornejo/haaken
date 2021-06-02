@@ -1,13 +1,12 @@
 import { Loader } from "rsuite";
-
 import Item from "../Item/Item";
 
 import "./ItemList.css";
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ productos, loading }) => {
   return (
     <div className="item-list">
-      {productos.length === 0 ? (
+      {loading ? (
         <div className="item-list__loading">
           <Loader size="lg" content="Cargando..." />
         </div>

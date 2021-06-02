@@ -1,57 +1,64 @@
 [
   {
     "_id": "1",
-    "name": "Product test",
-    "detail": "Lorem ipsum dolor sit amet",
-    "price": "99",
-    "hero": "OMG This just came out today!",
-    "image": "http://placehold.it/300x300/999/CCC"
-  },
-  {
-    "_id": "2",
     "name": "Product 1",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
-    "info": "This is the latest and greatest product from Derp corp.",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "hero": "OMG This just came out today!",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "teclados"
   },
   {
-    "_id": "3",
+    "_id": "2",
     "name": "Product 2",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
-    "offer": "BOGOF",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "info": "This is the latest and greatest product from Derp corp.",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "teclados"
   },
   {
-    "_id": "4",
+    "_id": "3",
     "name": "Product 3",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "offer": "BOGOF",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "audifonos"
   },
   {
-    "_id": "5",
+    "_id": "4",
     "name": "Product 4",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
-    "offer": "No srsly GTFO",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "mouse"
   },
   {
-    "_id": "6",
+    "_id": "5",
     "name": "Product 5",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "offer": "No srsly GTFO",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "mouse"
+  },
+  {
+    "_id": "6",
+    "name": "Product 6",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "microfonos"
   },
   {
     "_id": "7",
-    "name": "Product 6",
+    "name": "Product 7",
     "detail": "Lorem ipsum dolor sit amet",
     "price": "99",
     "info": "This is the latest and greatest product from Derp corp.",
     "offer": "info with offer",
-    "image": "http://placehold.it/300x300/999/CCC"
+    "image": "http://placehold.it/300x300/999/CCC",
+    "category": "mousepad"
   }
 ]

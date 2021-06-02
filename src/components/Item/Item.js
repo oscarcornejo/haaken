@@ -1,4 +1,4 @@
-import { Button } from "rsuite";
+import { Button, ButtonToolbar } from "rsuite";
 import { useHistory } from "react-router-dom";
 
 import "./Item.css";
@@ -18,9 +18,11 @@ const Item = ({ data }) => {
       <h2>{name}</h2>
       <p className="truncate">{detail}</p>
 
-      <Button appearance="primary" onClick={() => handleVerMas(_id)} block size="sm">
-        Ver Producto
-      </Button>
+      <ButtonToolbar>
+        <Button color="orange" onClick={() => handleVerMas(_id)} block size="sm">
+          Ver Producto
+        </Button>
+      </ButtonToolbar>
     </div>
   );
 };

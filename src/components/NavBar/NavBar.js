@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // React Suite
 import { Navbar, Nav, Icon, Dropdown } from "rsuite";
@@ -11,10 +10,13 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [activeKey, setActiveKey] = useState(null);
+  // const [activeKey, setActiveKey] = useState(null);
+  const history = useHistory();
 
   const handleSelect = (eventKey) => {
-    setActiveKey(eventKey);
+    // console.log(eventKey);
+    // setActiveKey(eventKey);
+    history.push(`/category/${eventKey}`);
   };
 
   return (
@@ -28,14 +30,17 @@ const NavBar = () => {
       <Navbar.Body>
         <Nav pullRight>
           <Dropdown
-            title="Productos"
+            title="Categorias"
             icon={<Icon icon="thumbs-o-up" />}
             onSelect={handleSelect}
-            activeKey={activeKey}
+            activeKey="audifonos"
           >
-            <Dropdown.Item eventKey="4">Producto A</Dropdown.Item>
-            <Dropdown.Item eventKey="5">Producto B</Dropdown.Item>
-            <Dropdown.Item eventKey="6">Producto C</Dropdown.Item>
+            <Dropdown.Item eventKey="todos">Todos los Productos</Dropdown.Item>
+            <Dropdown.Item eventKey="audifonos">audifonos</Dropdown.Item>
+            <Dropdown.Item eventKey="mouse">Mouse</Dropdown.Item>
+            <Dropdown.Item eventKey="microfonos">Microfonos</Dropdown.Item>
+            <Dropdown.Item eventKey="mousepad">Mousepad</Dropdown.Item>
+            <Dropdown.Item eventKey="teclados">Teclados</Dropdown.Item>
           </Dropdown>
 
           <CartWidget />
