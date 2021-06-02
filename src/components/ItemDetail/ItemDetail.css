@@ -16,6 +16,7 @@
 .item-detail .item-detail__colum-right {
   text-align: center;
   width: 49%;
+  height: 320px;
 }
 
 .item-detail .item-detail__name {
