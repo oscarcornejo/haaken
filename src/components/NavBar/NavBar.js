@@ -36,7 +36,7 @@ const NavBar = () => {
             activeKey="audifonos"
           >
             <Dropdown.Item eventKey="todos">Todos los Productos</Dropdown.Item>
-            <Dropdown.Item eventKey="audifonos">audifonos</Dropdown.Item>
+            <Dropdown.Item eventKey="audifonos">Audifonos</Dropdown.Item>
             <Dropdown.Item eventKey="mouse">Mouse</Dropdown.Item>
             <Dropdown.Item eventKey="microfonos">Microfonos</Dropdown.Item>
             <Dropdown.Item eventKey="mousepad">Mousepad</Dropdown.Item>

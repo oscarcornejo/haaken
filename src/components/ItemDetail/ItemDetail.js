@@ -11,12 +11,16 @@ const ItemDetail = ({ data }) => {
   const [count, setCount] = useState(0);
   const [stock] = useState(10);
 
-  const onAdd = () => {
-    if (count === 0) {
+  const onAdd = (value) => {
+    if (value === 0) {
       Alert.warning(`Debe seleccionar items para agregar al carrito`, 4200);
       return false;
     }
 
+    setCount(value);
+  };
+
+  const handleGoCart = () => {
     history.push("/cart");
   };
 
@@ -29,13 +33,13 @@ const ItemDetail = ({ data }) => {
       <div className="item-detail__colum-right">
         <h2 className="item-detail__name">{data.name}</h2>
         <p className="item-detail__detail">{data.detail}</p>
-        {/* <p className="item-detail__price">$ {count === 0 ? data.price : data.price * count}</p> */}
         <p className="item-detail__price">$ {data.price}</p>
-        <ItemCount stock={stock} onAdd={onAdd} count={count} setCount={setCount} />
 
-        {count > 0 && (
-          <Button appearance="ghost" disabled={stock === 0 ? true : false} onClick={onAdd}>
-            {stock === 0 ? "Sin Stock" : "Termina tu compra"}
+        {count === 0 ? (
+          <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+        ) : (
+          <Button color="red" appearance="ghost" onClick={handleGoCart}>
+            Termina tu compra
           </Button>
         )}
       </div>
