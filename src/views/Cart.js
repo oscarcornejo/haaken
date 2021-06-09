@@ -1,14 +1,26 @@
-import React from "react";
-import { useCartContext } from "../contexts/CartContext";
+import React, { useEffect, useState } from "react";
+import { useCart } from "../contexts/CartContext";
 
 const Cart = () => {
-  const { cartProductos } = useCartContext();
+  const { cartProductos } = useCart();
+  const [productos, setProductos] = useState([]);
 
-  console.log(cartProductos);
+  useEffect(() => {
+    if (cartProductos) {
+      setProductos(cartProductos);
+    }
+  }, [cartProductos]);
 
   return (
     <div>
-      <h2>Cart</h2>
+      {productos.map((product) => {
+        return (
+          <div key={product.item._id}>
+            <h2>{product.item.name}</h2>
+            <p>{product.item.detail}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };

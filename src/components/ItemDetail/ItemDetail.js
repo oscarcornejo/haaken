@@ -2,11 +2,14 @@ import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Button, Alert } from "rsuite";
 
-import "./ItemDetail.css";
 import { useHistory } from "react-router";
+import { useCart } from "../../contexts/CartContext";
+
+import "./ItemDetail.css";
 
 const ItemDetail = ({ data }) => {
   const history = useHistory();
+  const { addItem, isInCart } = useCart();
 
   const [count, setCount] = useState(0);
   const [stock] = useState(10);
@@ -17,7 +20,13 @@ const ItemDetail = ({ data }) => {
       return false;
     }
 
+    if (isInCart(data._id)) {
+      Alert.warning(`El producto ya existe, favor seleccione otro para continuar.`, 5000);
+      return false;
+    }
+
     setCount(value);
+    addItem(data, value);
   };
 
   const handleGoCart = () => {
