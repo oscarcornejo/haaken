@@ -25,7 +25,14 @@ const ItemDetail = ({ data }) => {
     // }
 
     setCount(value);
-    addItem(data, value);
+
+    const dataItem = {
+      ...data,
+      totalItem: parseInt(data.price * value, 10),
+      itemsSelected: value,
+    };
+
+    addItem(dataItem);
   };
 
   const handleGoCart = () => {

@@ -12,7 +12,7 @@ const CartWidget = () => {
     if (cartProductos) {
       if (cartProductos.length > 0) {
         const sumQuantity = cartProductos.reduce((previousValue, currentValue) => {
-          return previousValue + currentValue.quantity;
+          return previousValue + currentValue.itemsSelected;
         }, 0);
 
         setItemsInCart(sumQuantity);
