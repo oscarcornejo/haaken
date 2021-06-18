@@ -21,10 +21,18 @@ const ItemDetailContainer = () => {
       const itemCollection = db.collection("items");
       const data = itemCollection.doc(id);
 
-      data.get().then((item) => {
-        setProducto(item.data());
-        setLoading(false);
-      });
+      data
+        .get()
+        .then((item) => {
+          setProducto({ id: item.id, ...item.data() });
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
 
     getProducto();

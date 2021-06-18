@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Loader } from "rsuite";
 import Item from "../Item/Item";
 
 import "./ItemList.css";
 
-const ItemList = ({ productos, loading }) => {
+const ItemList = memo(({ productos, loading }) => {
   return (
     <div className="item-list">
       {loading ? (
@@ -17,6 +18,6 @@ const ItemList = ({ productos, loading }) => {
       )}
     </div>
   );
-};
+});
 
 export default ItemList;

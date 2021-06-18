@@ -3,6 +3,8 @@ import { useState, createContext, useContext, useEffect } from "react";
 export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
+// const initialState = {items: [], totalPrice:0}
+
 export const CartProvider = ({ children }) => {
   const [cartProductos, setCartProductos] = useState([]);
 

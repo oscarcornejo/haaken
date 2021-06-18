@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Button, ButtonToolbar } from "rsuite";
 import { useHistory } from "react-router-dom";
 
 import "./Item.css";
 
-const Item = ({ data }) => {
+const Item = memo(({ data }) => {
   const { name, detail, image, id } = data;
   let history = useHistory();
 
@@ -25,6 +26,6 @@ const Item = ({ data }) => {
       </ButtonToolbar>
     </div>
   );
-};
+});
 
 export default Item;
