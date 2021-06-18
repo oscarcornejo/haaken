@@ -22,7 +22,12 @@ const ItemListContainer = () => {
       const db = getFirestore();
       const itemCollection = db.collection("items");
 
-      const data = await itemCollection
+      const filteredItems =
+        idCategory && idCategory !== "todos"
+          ? itemCollection.where("category", "==", idCategory)
+          : itemCollection;
+
+      const data = await filteredItems
         .get()
         .then((querySnapshot) => {
           if (querySnapshot.size === 0) {
@@ -41,21 +46,12 @@ const ItemListContainer = () => {
           setLoading(false);
         });
 
-      if (idCategory && idCategory !== "todos") {
-        setLoading(true);
-        const dataFilter = data.filter((item) => item.category === idCategory);
-        setProductos(dataFilter);
-
-        if (dataFilter.length > 0) {
-          setIsCategory(true);
-          setLoading(false);
-        } else {
-          setIsCategory(false);
-          setLoading(false);
-        }
-      } else {
+      if (data.length > 0) {
         setProductos(data);
         setIsCategory(true);
+      } else {
+        setProductos(data);
+        setIsCategory(false);
       }
     };
 
