@@ -12,7 +12,6 @@ const ItemDetail = ({ data }) => {
   const { addItem } = useCart();
 
   const [count, setCount] = useState(0);
-  const [stock] = useState(10);
 
   const onAdd = (value) => {
     if (value === 0) {
@@ -45,7 +44,7 @@ const ItemDetail = ({ data }) => {
         <p className="item-detail__price">$ {data.price}</p>
 
         {count === 0 ? (
-          <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+          <ItemCount stock={data.stock} initial={0} onAdd={onAdd} />
         ) : (
           <Button color="red" appearance="ghost" onClick={handleGoCart}>
             Termina tu compra

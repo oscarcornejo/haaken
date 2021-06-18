@@ -14,7 +14,7 @@ const ItemCount = ({ stock, initial = 0, onAdd }) => {
   };
 
   const handlePlus = () => {
-    if (countItem >= stock) {
+    if (countItem >= Number(stock)) {
       Alert.warning(`No hay stock suficiente para sumar a tu pedido.`, 4200);
       return false;
     }
