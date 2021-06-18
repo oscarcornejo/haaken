@@ -6,7 +6,7 @@ import { useCart } from "../../contexts/CartContext";
 
 const CartWidget = () => {
   const { cartProductos } = useCart();
-  const [itemsInCart, setItemsInCart] = useState(null);
+  const [itemsInCart, setItemsInCart] = useState(0);
 
   useEffect(() => {
     if (cartProductos) {
@@ -16,9 +16,11 @@ const CartWidget = () => {
         }, 0);
 
         setItemsInCart(sumQuantity);
+      } else {
+        setItemsInCart(0);
       }
     }
-  }, [cartProductos]);
+  }, [cartProductos, itemsInCart]);
 
   return (
     <Nav.Item componentClass={Link} to="/cart" icon={<Icon icon="shopping-cart" />}>
