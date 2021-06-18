@@ -4,7 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { Message } from "rsuite";
 
 import ItemList from "../ItemList/ItemList";
-import DATA from "../../utils/dataProductos.json";
+
+import { getFirestore } from "../../firebase";
 
 import "./ItemListContainer.css";
 
@@ -16,27 +17,45 @@ const ItemListContainer = () => {
   const [isCategory, setIsCategory] = useState(true);
 
   useEffect(() => {
-    const getProductos = () => {
+    const getProductos = async () => {
       setLoading(true);
+      const db = getFirestore();
+      const itemCollection = db.collection("items");
+
+      const data = await itemCollection
+        .get()
+        .then((querySnapshot) => {
+          if (querySnapshot.size === 0) {
+            // console.log("Sin Resultados");
+            return [];
+          }
+
+          return querySnapshot.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+
       if (idCategory && idCategory !== "todos") {
-        const dataFilter = DATA.filter((item) => item.category === idCategory);
+        setLoading(true);
+        const dataFilter = data.filter((item) => item.category === idCategory);
+        setProductos(dataFilter);
 
         if (dataFilter.length > 0) {
-          setTimeout(() => {
-            setProductos(dataFilter);
-            setLoading(false);
-            setIsCategory(true);
-          }, 1000);
-        } else {
+          setIsCategory(true);
           setLoading(false);
+        } else {
           setIsCategory(false);
+          setLoading(false);
         }
       } else {
-        setTimeout(() => {
-          setProductos(DATA);
-          setLoading(false);
-          setIsCategory(true);
-        }, 1000);
+        setProductos(data);
+        setIsCategory(true);
       }
     };
 

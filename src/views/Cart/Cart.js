@@ -43,7 +43,7 @@ const Cart = () => {
       ) : (
         productos.map((product) => {
           return (
-            <div className="cart-view" key={product.item._id}>
+            <div className="cart-view" key={product.item.id}>
               <div className="cart-view-img">
                 <img src={product.item.image} alt={product.item.name} />
               </div>
@@ -57,7 +57,7 @@ const Cart = () => {
               <div className="cart-view-price">
                 <h2>$ {product.item.price * product.quantity}</h2>
 
-                <span onClick={() => deleteItem(product.item._id)}>X</span>
+                <span onClick={() => deleteItem(product.item.id)}>X</span>
               </div>
             </div>
           );

@@ -3,30 +3,28 @@ import { Loader, Message } from "rsuite";
 import { useParams } from "react-router";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-import data from "../../utils/dataProductos.json";
+import { getFirestore } from "../../firebase";
 
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  // const location = useLocation();
 
   const [producto, setProducto] = useState({});
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // if (location.state !== "") {
-    //   setProducto(location.state.data);
-    // }
-
     const getProducto = () => {
       setLoading(true);
-      const product = data.filter((item) => item._id === id);
 
-      setTimeout(() => {
-        setProducto(product[0]);
+      const db = getFirestore();
+      const itemCollection = db.collection("items");
+      const data = itemCollection.doc(id);
+
+      data.get().then((item) => {
+        setProducto(item.data());
         setLoading(false);
-      }, 2000);
+      });
     };
 
     getProducto();

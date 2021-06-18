@@ -12,7 +12,7 @@ const ItemList = ({ productos, loading }) => {
         </div>
       ) : (
         productos?.map((item) => {
-          return <Item data={item} key={item._id} />;
+          return <Item data={item} key={item.id} />;
         })
       )}
     </div>

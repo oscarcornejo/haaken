@@ -20,7 +20,7 @@ const ItemDetail = ({ data }) => {
       return false;
     }
 
-    // if (isInCart(data._id)) {
+    // if (isInCart(data.id)) {
     //   Alert.warning(`El producto ya existe, favor seleccione otro para continuar.`, 5000);
     //   return false;
     // }

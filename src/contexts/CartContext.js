@@ -26,9 +26,9 @@ export const CartProvider = ({ children }) => {
 
   // agregar cierta cantidad de un ítem al carrito
   const addItem = (item, quantity) => {
-    if (isInCart(item._id)) {
+    if (isInCart(item.id)) {
       const updatedItem = cartProductos.map((producto) => {
-        if (producto.item._id === item._id) {
+        if (producto.item.id === item.id) {
           producto.quantity += quantity;
           return producto;
         } else {
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   // Remover un item del cart por usando su id
   const removeItem = (itemId) => {
     const itemsFiltered = cartProductos.filter((el) => {
-      return el.item._id !== itemId;
+      return el.item.id !== itemId;
     });
 
     setCartProductos(itemsFiltered);
@@ -63,7 +63,7 @@ export const CartProvider = ({ children }) => {
 
   // Retorna true | false;
   const isInCart = (id) => {
-    const found = cartProductos.some((el) => el.item._id === id);
+    const found = cartProductos.some((el) => el.item.id === id);
 
     if (found) {
       return true;
