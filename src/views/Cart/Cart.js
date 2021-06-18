@@ -19,6 +19,8 @@ const Cart = () => {
     phone: "",
     email: "",
   });
+  const [orderId, setOrderId] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const history = useHistory();
 
@@ -62,12 +64,26 @@ const Cart = () => {
       return;
     }
 
+    setLoading(true);
+
     const newOrder = {
       buyer: infoUser,
       items: productos,
       total: totalCart,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
     };
+
+    orders
+      .add(newOrder)
+      .then((resp) => {
+        setOrderId(resp.id);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (

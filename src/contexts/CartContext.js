@@ -8,8 +8,6 @@ const initialState = [];
 export const CartProvider = ({ children }) => {
   const [cartProductos, setCartProductos] = useState(initialState);
 
-  console.log(cartProductos);
-
   useEffect(() => {
     const getProductos = JSON.parse(localStorage.getItem("productos"));
     if (getProductos && getProductos.length > 0) {
