@@ -11,11 +11,10 @@ const CartWidget = () => {
   useEffect(() => {
     if (cartProductos) {
       if (cartProductos.length > 0) {
-        const sumQuantity = cartProductos?.reduce((previousValue, currentValue) => {
-          return {
-            items: previousValue.quantity + currentValue.quantity,
-          };
-        });
+        const sumQuantity = cartProductos.reduce((previousValue, currentValue) => {
+          return previousValue + currentValue.quantity;
+        }, 0);
+
         setItemsInCart(sumQuantity);
       }
     }
@@ -23,7 +22,8 @@ const CartWidget = () => {
 
   return (
     <Nav.Item componentClass={Link} to="/cart" icon={<Icon icon="shopping-cart" />}>
-      {itemsInCart.items > 0 ? <Badge content={itemsInCart.items}>Carrito</Badge> : "Carrito"}
+      {console.log(itemsInCart)}
+      {itemsInCart > 0 ? <Badge content={itemsInCart}>Carrito</Badge> : "Carrito"}
     </Nav.Item>
   );
 };
