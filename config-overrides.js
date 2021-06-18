@@ -7,7 +7,7 @@ module.exports = override(
     lessOptions: {
       javascriptEnabled: true,
       modifyVars: {
-        "@body-bg": "#fbfbfb",
+        "@body-bg": "#f1f1f1",
       },
     },
   })

@@ -26,27 +26,39 @@ export const CartProvider = ({ children }) => {
 
   // agregar cierta cantidad de un ítem al carrito
   const addItem = (item, quantity) => {
-    console.log("addItem");
-
     if (isInCart(item._id)) {
-      return;
-    }
+      const updatedItem = cartProductos.map((producto) => {
+        if (producto.item._id === item._id) {
+          producto.quantity += quantity;
+          return producto;
+        } else {
+          return producto;
+        }
+      });
 
-    setCartProductos([...cartProductos, { item, quantity }]);
-    localStorage.setItem("productos", JSON.stringify([...cartProductos, { item, quantity }]));
+      setCartProductos(updatedItem);
+      localStorage.setItem("productos", JSON.stringify(updatedItem));
+    } else {
+      const newItem = [...cartProductos, { item, quantity }];
+      setCartProductos(newItem);
+      localStorage.setItem("productos", JSON.stringify(newItem));
+    }
   };
 
   // Remover un item del cart por usando su id
   const removeItem = (itemId) => {
-    const filtered = cartProductos.filter((el) => {
+    const itemsFiltered = cartProductos.filter((el) => {
       return el.item._id !== itemId;
     });
-    console.log("removeItem", filtered);
+
+    setCartProductos(itemsFiltered);
+    localStorage.setItem("productos", JSON.stringify(itemsFiltered));
   };
 
   // Remover todos los items
   const clear = () => {
     setCartProductos([]);
+    localStorage.setItem("productos", []);
   };
 
   // Retorna true | false;
