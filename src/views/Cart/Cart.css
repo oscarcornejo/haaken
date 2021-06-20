@@ -1,3 +1,51 @@
+.cart-view-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cart-view-box .cart-view-left {
+  width: 56%;
+}
+
+.cart-view-box .cart-view-right {
+  width: 40%;
+  background: white;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 20px;
+}
+
+.cart-view-box .cart-view-right form .input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.cart-view-box .cart-view-right form .input-group label {
+  margin-bottom: 2px;
+}
+
+.cart-view-box .cart-view-right form .input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cart-view-box .cart-view-right form .input-group input.invalid {
+  border: 1px solid red;
+}
+
+.cart-view-box .cart-view-right form .input-group p {
+  font-size: 12px;
+  color: red;
+}
+
 .cart-view {
   background: white;
   padding: 15px 20px;
@@ -70,4 +118,15 @@
   background: white;
   border: 1px solid #ff5c5c;
   cursor: pointer;
+}
+
+.cart-view-total {
+  text-align: right;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-view-btn-order {
+  font-weight: 500 !important;
 }

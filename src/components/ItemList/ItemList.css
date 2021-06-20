@@ -4,11 +4,11 @@
   flex-wrap: wrap;
 }
 
-.item-list::after {
+/* .item-list::after {
   content: "";
-  /* flex: 1 1 100%; */
+  // flex: 1 1 100%;
   flex-grow: 0.83;
-}
+} */
 
 .item-list .item-list__loading {
   width: 100%;
