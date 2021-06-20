@@ -4,11 +4,11 @@ export default function validateInfo(values) {
   // const phoneRegex = /^(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}$/;
   const phoneRegex = /[^0-9]/g;
 
-  if (!values.name.trim() && !values.phone.trim() && !values.email.trim()) {
-    errors.nameError = "*El campo Nombre es obligatorio";
-    errors.phoneError = "*El campo Teléfono es obligatorio";
-    errors.emailError = "*El campo Email es obligatorio";
-  }
+  // if (!values.name.trim() && !values.phone.trim() && !values.email.trim()) {
+  //   errors.nameError = "*El campo Nombre es obligatorio";
+  //   errors.phoneError = "*El campo Teléfono es obligatorio";
+  //   errors.emailError = "*El campo Email es obligatorio";
+  // }
 
   if (!values.name.trim()) {
     errors.nameError = "*El campo Nombre es obligatorio";
@@ -16,6 +16,14 @@ export default function validateInfo(values) {
     errors.nameError = "*El campo Nombre debe tener más de 2 caracteres";
   } else if (!/^[A-Za-z]+/.test(values.name.trim())) {
     errors.nameError = "Favor ingresar solo letras";
+  }
+
+  if (!values.lastname.trim()) {
+    errors.lastnameError = "*El campo Apellido es obligatorio";
+  } else if (values.lastname.trim().length < 2) {
+    errors.lastnameError = "*El campo Apellido debe tener más de 2 caracteres";
+  } else if (!/^[A-Za-z]+/.test(values.lastname.trim())) {
+    errors.lastnameError = "Favor ingresar solo letras";
   }
 
   if (!values.phone.trim()) {
@@ -32,6 +40,16 @@ export default function validateInfo(values) {
     errors.emailError = "Favor ingrese un Email válido";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = "El Email ingresado es inválido";
+  }
+
+  if (!values.confirEmail.trim()) {
+    errors.confirEmailError = "El campo Confirmar Email es oblogatorio";
+  } else if (!values.confirEmail.includes("@")) {
+    errors.confirEmailError = "Favor ingrese un Email válido";
+  } else if (!/\S+@\S+\.\S+/.test(values.confirEmail)) {
+    errors.confirEmailError = "El Email ingresado es inválido";
+  } else if (values.email.trim().toLowerCase() !== values.confirEmail.trim().toLowerCase()) {
+    errors.confirEmailError = "*El Email ingresado no coincide";
   }
 
   return errors;

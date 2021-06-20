@@ -13,7 +13,7 @@ import "./Cart.css";
 
 const db = getFirestore();
 
-const initialState = { name: "", phone: "", email: "" };
+const initialState = { name: "", lastname: "", phone: "", email: "", confirEmail: "" };
 
 const Cart = () => {
   const history = useHistory();
@@ -148,6 +148,22 @@ const Cart = () => {
             />
             {errors.nameError && <p>{errors.nameError}</p>}
           </div>
+
+          <div className="input-group">
+            <label htmlFor="lastname">Apellido</label>
+            <input
+              id="lastname"
+              type="text"
+              name="lastname"
+              placeholder="Ej: Oscar Cornejo"
+              value={infoUser.lastname}
+              onChange={handleInputChange}
+              onBlur={handleValidate}
+              className={errors.lastnameError ? "invalid" : ""}
+            />
+            {errors.lastnameError && <p>{errors.lastnameError}</p>}
+          </div>
+
           <div className="input-group">
             <label htmlFor="phone">Teléfono</label>
             <input
@@ -177,6 +193,22 @@ const Cart = () => {
             />
 
             {errors.emailError && <p>{errors.emailError}</p>}
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="confirEmail">Confirmar Email</label>
+            <input
+              id="confirEmail"
+              type="email"
+              name="confirEmail"
+              placeholder="Ej: oscar@cornejo.cl"
+              value={infoUser.confirEmail}
+              onChange={handleInputChange}
+              onBlur={handleValidate}
+              className={errors.confirEmailError ? "invalid" : ""}
+            />
+
+            {errors.confirEmailError && <p>{errors.confirEmailError}</p>}
           </div>
 
           <div className="cart-view-total">Total Pedido: ${totalCart}</div>
