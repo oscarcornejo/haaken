@@ -44,8 +44,6 @@ export const CartProvider = ({ children }) => {
       return el.id !== itemId;
     });
 
-    console.log(itemsFiltered);
-
     if (itemsFiltered.length > 0) {
       setCartProductos(itemsFiltered);
       localStorage.setItem("productos", JSON.stringify(itemsFiltered));
