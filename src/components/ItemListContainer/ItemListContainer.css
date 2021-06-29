@@ -1,3 +1,7 @@
+/* .item-list-container {
+  height: calc(100% - 56px);
+} */
+
 .item-list-container .item-list-container__title {
   font-size: 20px;
   text-align: center;

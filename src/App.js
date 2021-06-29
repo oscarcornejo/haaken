@@ -7,6 +7,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import PageNotFound from "./views/PageNotFound";
 import Cart from "./views/Cart/Cart";
+import Footer from "./components/Footer/Footer";
 
 // CSS
 import "./App.css";
@@ -25,6 +26,8 @@ function App() {
           <Route exact path="*" component={PageNotFound} />
         </Switch>
       </div>
+
+      <Footer />
     </Router>
   );
 }

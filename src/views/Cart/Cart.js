@@ -140,7 +140,7 @@ const Cart = () => {
               id="name"
               type="text"
               name="name"
-              placeholder="Ej: Oscar Cornejo"
+              placeholder="Ej: Oscar"
               value={infoUser.name}
               onChange={handleInputChange}
               onBlur={handleValidate}
@@ -155,7 +155,7 @@ const Cart = () => {
               id="lastname"
               type="text"
               name="lastname"
-              placeholder="Ej: Oscar Cornejo"
+              placeholder="Ej: Cornejo"
               value={infoUser.lastname}
               onChange={handleInputChange}
               onBlur={handleValidate}

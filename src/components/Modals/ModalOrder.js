@@ -25,7 +25,7 @@ const ModalOrder = ({ openModal, setOpenModal, loading, orderId }) => {
     <div className="modal-container">
       <Modal show={openModal} onHide={close} backdrop="static">
         <Modal.Header>
-          <Modal.Title>Procesando Orden</Modal.Title>
+          <Modal.Title>{loading ? "Procesando Orden" : "Orden Procesada"}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>

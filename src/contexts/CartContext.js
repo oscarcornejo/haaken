@@ -20,18 +20,20 @@ export const CartProvider = ({ children }) => {
   // agregar cierta cantidad de un ítem al carrito
   const addItem = (item) => {
     if (isInCart(item.id)) {
-      const items = cartProductos.map((producto) => {
+      const copyItems = [...cartProductos];
+
+      const items = copyItems.map((producto) => {
         if (producto.id === item.id) {
-          producto.itemsSelected += item.itemsSelected;
-          producto.totalItem += item.totalItem;
+          producto.itemsSelected = producto.itemsSelected + item.itemsSelected;
+          producto.totalItem = producto.totalItem + item.totalItem;
           return producto;
         } else {
           return producto;
         }
       });
 
-      setCartProductos([...cartProductos, items]);
-      localStorage.setItem("productos", JSON.stringify([...cartProductos, items]));
+      setCartProductos(items);
+      localStorage.setItem("productos", JSON.stringify(items));
     } else {
       setCartProductos([...cartProductos, item]);
       localStorage.setItem("productos", JSON.stringify([...cartProductos, item]));
